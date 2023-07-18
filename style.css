@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0 20%;
+    background: #291c38;
+    
+}
+
+img {
+    width: 100%;    
+}
+
+.title {
+    margin: 5% 0;
+    text-align: center;
+    width: 100%;
+}
+  
+#A1, #B1, #C1, #D1, #E1, #A15, #B15, #C15, #D15, #A2, #B2, #C2, #A3, #B3, #C3, #D3, #A35, #B35, #C35, #A4, #B4, #A5, #A6, #B6, #A7, #B7, #C7, #A8, #B8, #C8, #D8, #A9 {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer {
+    font-size: 70pt;
+    color: #e5ded4;
+    text-align: center;
+    margin: -10% 0 0 0;
+}
+
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-button {
+    display: block;
+}
+
+.stop-button, .reset-button {
+    display: none;
+}
+
+button {
+    border: none;
+    background: #ffbb00;
+    border: #e79e1f solid 5px;
+    color: white;
+    margin: 5%;
+    padding: 10px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20pt;
+}
+
+p {
+    margin: 30px 0 0 0;
+    font-size: 16pt;
+    color: #e5ded4;
+    text-align: center;
+}
+
+#linha {
+    width: 100%;
+    margin: 50px 0;
+    border-bottom: 2px solid #e5ded4;
+}
+  

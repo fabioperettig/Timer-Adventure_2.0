@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer Adventure</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="title" src="img/Timer-adventure-capa.png" alt="Timer Adventure">
+    <h1 id="timer">00:00:00</h1>
+    <div id="btn"><button class="start-button" onclick="startTimer()">Iniciar</button></div>
+    <div id="btn"><button class="stop-button" onclick="stopTimer()">Parar</button></div>
+    <div id="btn"><button class="reset-button" onclick="resetTimer()">Reiniciar</button></div>
+
+    <div id="container" class="container">
+    </div>
+
+    <div id="stories" class="stories">
+
+        <div id="A0" style="display: none;">
+            <img src="img2.0/A0.png" alt="Imagem A0">
+            <p>Boas histórias não se criam em períodos tão curtos.</p>
+        </div>
+
+        <!-- Parte 001 -->
+        
+        <div id="A1" style="display: none;">
+            <img src="img2.0/A1.png" alt="Imagem A1">
+            <p>Sua história começa aqui: Um robusto aventureiro que vive na companhia de sua fiel espada. Suas roupas já surradas pelo tempo, são protegidas apenas pelo seu gibão, mais confortável do que sua antiga armadura de placas. Também carrega consigo a ponta de uma flecha de metal amarrada por uma tira de couro, usada como colar para lembrar de seu falecido irmão.</p>
+        </div>
+        
+        <div id="B1" style="display: none;">
+            <img src="img2.0/B1.png" alt="Imagem B1">
+            <p>Sua história começa aqui: Uma feiticeira que vive isolada na floresta. Veste um túnica púrpura, uma triqueta em sua tiara e um pentagrama como amuleto de proteção no pescoço.<br><br>Apesar de jovem, possui um grande conhecimento herbalístico e magia arcana. Além disso, carrega também uma bolsa de couro repleta de pergaminhos.</p>
+        </div>
+        
+        <div id="C1" style="display: none;">
+            <img src="img2.0/C1.png" alt="Imagem C1">
+            <p>Sua história começa aqui: Um ladino, mestre nas artes furtivas que vive de roubos e pequenos favores em troca de dinheiro. Veste roupas de tecido leve, colete de couro e um manto encapuzado.<br><br>Além disso, tranquilamente consegue o que quer através de seu carisma, mas por uma questão de precaução, sempre carrega consigo uma adaga envenenada.</p>
+        </div>
+        
+        <div id="D1" style="display: none;">
+            <img src="img2.0/D1.png" alt="Imagem D1">
+            <p>Sua história começa aqui: Fornalha crepitando, martelos retumbantes e lâminas em brasa, este é o local onde você passa a maior parte do seu dia. Você é um notório ferreiro da cidade.<br><br>Face suada, vestes sujas de carvão, uma barba longa e trançada e uma fiel marreta de guerra que também serve como martelo.</p>
+        </div>
+        
+        <div id="E1" style="display: none;">
+            <img src="img2.0/E1.png" alt="Imagem E1">
+            <p>Sua história começa aqui: Você é uma caçadora que vive em uma cabana na floresta. Possui vestes verde-musgo, uma bolsa de couro com amostras de ervas e venenos, carregando consigo um arco de ébano e uma aljava repleta de flechas.Vive de pequenos trabalhos e da venda de pele de animais caçados, mas possui um grande espírito aventureiro.</p>
+        </div>
+        
+        <!-- Parte BÔNUS 001.5 -->
+        
+        <div id="A15" style="display: none;">
+            <img src="img2.0/A15.png" alt="Imagem A15">
+            <p>Bom, levando em conta o pouco tempo que se passou, não houve muito para se fazer. Seu personagem ainda está dormindo...</p>
+        </div>
+        
+        <div id="B15" style="display: none;">
+            <img src="img2.0/B15.png" alt="Imagem B15">
+            <p>Bom, levando em conta o pouco tempo que se passou, não houve muito para se fazer. Seu personagem tomou uma simples caneca de hidromel.</p>
+        </div>
+        
+        <div id="C15" style="display: none;">
+            <img src="img2.0/C15.png" alt="Imagem C15">
+            <p>Bom, levando em conta o pouco tempo que se passou, não houve muito para se fazer. Seu personagem está comendo uma bela peça de javali.</p>
+        </div>
+        
+        <div id="D15" style="display: none;">
+            <img src="img2.0/D15.png" alt="Imagem D15">
+            <p>Bom, levando em conta o pouco tempo que se passou, não houve muito para se fazer. Seu personagem está fazendo uma faxina no inventário, pra que tanta tralha?!</p>
+        </div>
+        
+        <!-- Parte 002 -->
+        
+        <div id="A2" style="display: none;">
+            <img src="img2.0/A2.png" alt="Imagem A2">
+            <p>É o início de mais um dia, você nota que precisa repor seu estoque de lenha e sai andando floresta a dentro. Depois de uma considerável caminhada, você percebe um brilho peculiar em meio às folhas de um arbusto. Não contendo a curiosidade, caminha rapidamente até o árbusto e apanha o objeto cintilante.</p>
+        </div>
+        
+        <div id="B2" style="display: none;">
+            <img src="img2.0/B2.png" alt="Imagem B2">
+            <p>É noite, você está bebendo na taverna de uma pequena cidade ao norte da capital. Após se sentar em uma cadeira ao canto, você observa cada uma das mesas, uma em particular chamando sua atenção pois nota um paladino, um bardo, um elfo druida e um ladino bebendo juntos... um grupo bastante peculiar. Mas rapidamente volta sua atenção para o que realmente importa: O objeto em suas mãos, comprada de um caixeiro viajante.</p>
+        </div>
+        
+        <div id="C2" style="display: none;">
+            <img src="img2.0/C2.png" alt="Imagem C2">
+            <p>Abrigando-se em sua cabana ao final de mais um dia, você já pousou seus pertences ao pé da cama e se prepara para finalmente relaxar. Eis que de repente você ouve passos rápidos e, ao mirar pela janela a fim de tentar descobrir o que se passa, você avista um vulto deixando um objeto envolto em trapos em sua porta. Rapidamente você corre até a porta abrindo-a de supetão e, embora já não veja nem sinal do vulto, você decide então pegar o objeto deixado.</p>
+        </div>
+        
+        <!-- Parte 003 -->
+        
+        <div id="A3" style="display: none;">
+            <img src="img2.0/A3.png" alt="Imagem A3">
+            <p>Uma lâmina negra de adaga com um pedaço de pergaminho atravessado. Você não sabe direito porque esta porcaria lhe chamou tanta atenção, todavia, você decide tirar o pergaminho para analisar a tal lâmina com mais cuidado. A lâmina, embora incomum, aparenta não passar de um pedaço velho de metal.<br><br>Todavia, você se surpreende ao notar algo escrito no pergaminho com letras trêmulas, dando a impressão de ter sido escrito às pressas: "Eu sinceramente não queria que isso caísse em suas mãos, mas penso primeiro na minha vida do que na sua. A criatura dorme na floresta e, a menos que seja morta, virá atrás de você na próxima lua cheia."</p>
+        </div>
+        
+        <div id="B3" style="display: none;">
+            <img src="img2.0/B3.png" alt="Imagem B3">
+            <p>Uma espécie de colar de metal com um pingente de lobo, enrolado em um pergaminho. Você guarda o pingente em sua bolsa e desenrola o pergaminho para analisá-lo, se surpreendendo com o que vê: Um mapa da região! Desenhado a mão com uma riqueza de detalhes absurda e imediatamente se pergunta por que alguém se desfaria disso.<br><br>Depois de uma rápida analisada, seus olhos pousam sobre um circulo riscado no mapa, mostrando uma clareira em meio à floresta, escrito logo abaixo: "Finalmente encontrei!! Está escondido no coração da floresta, entre as sombras do crepúsculo e seu coração deve ser perfurado!"</p>
+        </div>
+        
+        <div id="C3" style="display: none;">
+            <img src="img2.0/C3.png" alt="Imagem C3">
+            <p>Uma pequena esfera de cristal, que ondula em seu interior uma fumaça densa, quase líquida, com um brilho tímido. Você nunca viu nada parecido e relíquia adormecida em suas mãos lhe causa bastante fascínio e enquietude.<br><br>Você rotaciona a esfera em suas mãos e percebe que, quanto mais a esfera é mexida, mais forte se torna o seu brilho. Decide então chacoalhar a pequena esfera rapidamente e volta a encará-la, a fumaça se move agitada, tal qual o mar em dias de fúria e seu brilho agora ilumina seu rosto, lhe causando bastante fascinação.<br><br>Eis então que, através de magia ou delírio, uma forma parece se projetar em meio à fumaça... Você leva a esfera mais perto dos olhos e acaba vendo sua própria imagem vista de costas, exatamente como está agora. A cena incômoda começa a se afastar, ficando cada vez mais distante de você e indo rapidamente para o interior da floresta. Eis que você ouve sua própria voz ecoar em sua mente dizendo: "Não tente continuar fugindo do caminho que deve cruzar, encontre e enfrente antes que enfrente você!"</p>
+        </div>
+        
+        <div id="D3" style="display: none;">
+            <img src="img2.0/D3.png" alt="Imagem D3">
+            <p>Um pequeno baú de metal com um cadeado enferrujado. Ao chacoalhá-lo, você ouve um tilintar tímido em seu interior, tendo imediatamente a nítida sensação de que, o que quer que esteja dentro do baúzinho, é valioso para você.<br><br>Usando suas habilidades, você abre o cadeado sem muito esforço e, ao abrir o pequeno baú, avista duas metades de um cristal emanando um brilho azulado. Após juntar os fragmentos, você sente um arrepio na espinha ao ouvir uma voz retumbante ecoar em sua mente, dizendo claramente: "Aquilo que mais deseja está lhe esperando no pântano, mas não espere benevolência."</p>
+        </div>
+        
+        <!-- Parte BÔNUS 003.5 -->
+        
+        <div id="A35" style="display: none;">
+            <img src="img2.0/C8.png" alt="Imagem A35">
+            <p>Você estava em um estado de concentração tão grande, que só após alguns minutos começa a notar um formigamento vindo de seu polegar esquerdo. Ao olhar para seu dedo, você percebe um pequeno corte esverdedado, provavelmente causado pelo artefato ao manuseá-lo de forma bruta.<br><br>Você começa a se sentir mal, a visão se torna turva, a boca fica seca e sua garganta se fecha. Seria uma espécie de veneno que protegeria o artefato de cair em mãos erradas? Você sente seus músculos enrijecerem e o ar sumir de seus pulmões. Você cai imediatamente no chão, tendo uma morte rápida, porém dolorosa.</p>
+        </div>
+        
+        <div id="B35" style="display: none;">
+            <img src="img2.0/B35.png" alt="Imagem B35">
+            <p>Sua mente se inquieta, se perguntando o que será todo esse mistério? Todavia, você se lembra que há um compromisso importante para realizar amanhã e não pode perder tempo com isso agora.<br><br>No dia seguinte, você realiza seus afazeres na cidade, pensando no misterioso artefato que deixou escondido em sua cabana. Ao final de mais um dia, caminhando a passos largos até sua morada, você é congelado pelo que vê: A porta de sua cabana está partida ao meio. Com o coração apertado, você corre cabana a dentro e vê todos os seus percentes revirados e espalhados pelo chão.<br><br>Após conseguir voltar a raciocinar direito, você imediatamente vai até o local onde escondeu o artefato, mas confirmando o que temia, havia sido roubado. Quem quer q tenha invadido sua cabana, estava atrás apenas do artefato e obviamente o encontrou.</p>
+        </div>
+        
+        <div id="C35" style="display: none;">
+            <img src="img2.0/C8.png" alt="Imagem C35">
+            <p>Infelizmente, nem toda história consiste em uma grande aventura com final feliz... Você deu tanta atenção ao artefato que não notou a sombra furtiva que se esgueirou até você, cravando o punhal em seu peito e tomando o artefato de suas mãos.</p>
+        </div>
+        
+        <!-- Parte 004 -->
+        
+        <div id="A4" style="display: none;">
+            <img src="img2.0/A4.png" alt="Imagem A4">
+            <p>Seu coração dispara e seus olhos brilham como se abrigassem chamas, você sente que precisa investigar esse mistério mais a fundo. Está decidido, você partirá durante a próxima alvorada.<br><br>Após uma noite em claro, você se equipa com suas armas e suprimentos, sente o cheiro do orvalho matinal e parte floresta a dentro. A caminhada já perdurara por horas quando você se depara com um imenso desfiladeiro, impedindo sua jornada de continuar. O único caminho oferecido até o outro lado do desfiladeiro é através de uma ponte precária, cujas cordas e ripas encontram-se num estado já deplorável.<br><br>A única coisa mais decrépta que a ponte é a criatura prostrada em sua frente. Um velho moribundo, doente, cuja explicação de como ainda está vivo é inexistente. Estende a mão definhada em sua direção e esbraveja: "PARE! Para atravessar a ponte você deve responder uma pergunta: Eu tenho duas cabeças, mas apenas um corpo... Quanto mais parada fico, mais rápido corro... O que sou eu?"</p>
+        </div>
+        
+        <div id="B4" style="display: none;">
+            <img src="img2.0/B4.png" alt="Imagem B4">
+            <p>Talvez em uma outra situação você temeria pela própria vida mas, por mais estranho que pareça, sua mente se mantém exclusivamente focada nesta expedição, como se estivesse em um estado de transe. Está decidido, você partirá durante a próxima alvorada.<br><br>Após uma noite em claro, você se equipa com suas armas e suprimentos, sente o cheiro do orvalho matinal e parte floresta a dentro. A caminhada já perdurara por horas quando você se depara com um imenso desfiladeiro, impedindo sua jornada de continuar. O único caminho oferecido até o outro lado do desfiladeiro é através de uma ponte precária, cujas cordas e ripas encontram-se num estado já deplorável.<br><br>A única coisa mais decrépta que a ponte é a criatura prostrada em sua frente. Um velho moribundo, doente, cuja explicação de como ainda está vivo é inexistente. Estende a mão definhada em sua direção e esbraveja: "PARE! Para atravessar a ponte você deve responder uma pergunta: O homem que me viu não me quer, o homem que me fez não precisa de mim e o homem que precisa de mim nunca me viu. O que sou eu?"</p>
+        </div>
+        
+        <!-- Parte BÔNUS 005 -->
+        
+        <div id="A5" style="display: none;">
+            <img src="img2.0/A5.png" alt="Imagem A5">
+            <p>Será que existe uma resposta para este enigma? Seja qual for, você fracassou. Ao dar a resposta errada, o velho encarou-lhe nos olhos e, ao abrir a boca, uma luz e um calor incandescente veio ao seu encontro. Você sente seu corpo em chamas, derretendo sua carne, resumindo-te apenas a um amontoado de ossos ao pé do velho. Que pena.</p>
+        </div>
+        
+        <!-- Parte 006 -->
+        
+        <div id="A6" style="display: none;">
+            <img src="img2.0/A6.png" alt="Imagem A6">
+            <p>Concluíndo que não há outro modo de seguir seu caminho, além deste que é guardado pelo velho, você deambula por alguns segundos refletido sobre o enigma. Você fita o horizonte, percebendo o caminho já percorrido pelo sol e pensa: "A manhã já terminou... preciso avançar o máximo antes crepúsculo!" Você sente a frustração aflorar em seu âmago, diante dessa cena patética, pois certamente não gostaria de perder o seu tempo com bobagens... Tempo? Tempo! É isso! Você se prostra em frente ao velho, encara-o nos olhos e diz a resposta do enigma: "Uma ampulheta!"<br><br>Sem esboçar reação alguma, o velho se move para o lado, liberando seu caminho para a ponte deixando-lhe livre para continuar sua jornada. A ponte precária dança perante o vento, acompanhada pela sinfonia do ranger das cordas e de estalos na madeira sob cada passo. Você se agarra às cordas laterais como se fossem sua própria alma, a fim de tentar tirar o máximo de peso de seu equipamento (assim como seu próprio corpo) de cima da madeira apodrecida da ponte.<br><br>Finalmente, após enternos minutos de pavor, você chega ao final da ponte, presa ao outro lado do desfiladeiro. Você olha para trás e dois pensamentos vêm à cabeça: "O velho não está mais lá..." e "espero que eu não precise voltar por essa ponte."</p>
+        </div>
+        
+        <div id="B6" style="display: none;">
+            <img src="img2.0/B6.png" alt="Imagem B6">
+            <p>Concluíndo que não há outro modo de seguir seu caminho, além deste que é guardado pelo velho, você deambula por alguns segundos refletido sobre o enigma. Você fita o horizonte, percebendo o caminho já percorrido pelo sol e pensa: "A manhã já terminou... preciso avançar o máximo antes crepúsculo!" Você sente a frustração aflorar em seu âmago, diante dessa cena patética pensando "Será que não seria mais fácil simplesmente matar o velho? Bom, pela aparência desgraçada, se algum dia esse aí já foi enterrado, certamente levantou. Espera... É isso!!" Você se prostra em frente ao velho, encara-o nos olhos e diz a resposta do enigma: "Um caixão!"<br><br>Sem esboçar reação alguma, o velho se move para o lado, liberando seu caminho para a ponte deixando-lhe livre para continuar sua jornada. A ponte precária dança perante o vento, acompanhada pela sinfonia do ranger das cordas e de estalos na madeira sob cada passo. Você se agarra às cordas laterais como se fossem sua própria alma, a fim de tentar tirar o máximo de peso de seu equipamento (assim como seu próprio corpo) de cima da madeira apodrecida da ponte.<br><br>Finalmente, após enternos minutos de pavor, você chega ao final da ponte, presa ao outro lado do desfiladeiro. Você olha para trás e dois pensamentos vêm à cabeça: "O velho não está mais lá..." e "espero que eu não precise voltar por essa ponte."</p>
+        </div>
+
+        <!-- Parte 007 -->
+
+        <div id="A7" style="display: none;">
+            <img src="/img2.0/A7.png" alt="Imagem A7">
+            <p>Após toda a caminhada interminável, você sente uma brisa úmida tocando seu rosto. De repente, começa a ouvir algo que parece ser uma antiga canção portuária: "Venham jovens e velhos, para a embarcação! Para mim, ei, que o rei se dê mal! Sou amigo daqueles que não vivem no chão! Para mim basta o mar e que o rei se dê mal!"<br><br>Após mais alguns passos, você avista um homem sentando em meio a destroços do que parece ter sido uma pequena Chalupa. Com as vestes sujas, a barba cheia e grisalha, o homem canta a plenos pulmões enquanto, de olhos fechados, parece imaginar com afinco que está navegando com seus destroços.<br><br>Se aproximando com cautela, você pigarreia a fim de chamar a atenção do velho marinheiro. Ele então bafora o cachimbo, abre os olhos lentamente e olha diretamente para ti, como se já esperasse sua visita. "Vejo que você realizou uma longa caminhada até aqui, não é? Sente-se, tome uma caneca e deixe o corpo descansar." Você aceita o convite e se aquece com a bebida, decide então lançar um amontoado de perguntas aos velho marinheiro.<br><br> Quem é você? Por que está aqui? Foi você que me chamou para cá? Mas o marinheiro olha para ti com complacência e diz: "Sua mente está muito inquieta, você se preocupa demais com a razão de estar aqui... Isso não importa, o que importa é que você percorreu um longo caminho e triunfou sobre ele! Não sei o que de fato trouxe você até aqui, mas sei que vem de longe e admiro seu espírito aventuroso! Me faz lembrar da época em que eu vivia sobre os sete mares!"<br><br> E o marinheiro continua: "Sabe? Acredito que devas receber uma recompensa, pois o mundo precisa de pessoas como você!" O velho arrasta para perto de si uma velha bolsa de couro desgastada pelo tempo e pelo uso, arranca um cristal vermelho e reluzente do interior da bolsa e diz: "Encontrei este cristal numa caverna há muito tempo, quando sofri um naufrágio após bater uma de minhas Chalupas na encosta das ilhas do Sul... Deu pra ver que eu não tenho muita sorte com Chalupas, não é mesmo? Me lembro perfeitamente de pegar este cristal e ver uma névoa reluzente sair de seu interior... Depois me lembro de ter sentido um sono profundo e acordar na beira da praia. Devo ter caído no sono mas não me lembro como saí da caverna e caminhei até às areias... Enfim, acho que isso não importa afinal! Aceite este cristal como presente, caso não seja útil para ti, certamente conseguirá conseguirá vendê-lo por uma bela quantia!"</p>
+        </div>
+
+        <div id="B7" style="display: none;">
+            <img src="/img2.0/B7.png" alt="Imagem B7">
+            <p>Você continua com o andar pesado, já se passaram várias horas e seu corpo cansado clama por água. A fim de procurar uma fonte de água, você atravessa mais algumas árvores entrelaçadas por um emaranhado de galhos secos e espinhentos... quando de repente seus músculos se pretificam, seus olhos arregalam e sua espinha congela diante da cena a frente: Tão grande quanto as árvores e com escamas duras como rochas! Um dragão cinzento, sentando em meio a tesouros e destroços de estátuas de ouro maciço, olha fixamente para você. As narinas expandem exalando um ar denso e quente, as pupilas se contraem e os músculos das costas se contraem, ajeitando as asas. <br><br>Você imediatamente se prosta em posição de ataque, com as mãos trêmulas e a garganta seca, deixando claro que atacará diante de algum movimento brusco do dragão! Todavia, o dragão aproxima a cabeça de uma vasilha e, ao assoprar delicadamente sobre ela, a vasilha magicamente se enche de água critalina. O dragão então volta a se encolher sobre os tesouros e diz: "Se pretende me atacar, saiba que será em vão... Mas se desejas que eu morra, basta esperar! Pois estou em meus últimos momentos de existência."<br><br>A voz gultural do dragão vibra em sua cabeça, seu tom de voz sereno deixa claro que não pretende lhe causar mal, assim como sua aparência cansada e moribunda revela que espera pela morte há muito tempo... Você se aproxima com cautela do dragão moribundo e, carregado pela sede, você afunda sua cabeça sobre a vasilha e aplaca sua sede completamente! Você então finalmente se sacia e, olhando para o dragão, lhe agradeçe e pergunta o que ele faz naquele lugar. O dragão pacientemente responde: "Durante toda minha existência, atravessei mares e terras acumulando riquezas. Ouro, pedras preciosas, relíquias do Norte e afins... Minha ganância e luxúria crescia com o passar das décadas, quanto mais riquezas acumulava, mais sedento por elas eu ficava. Todavia, minha avareza me levou à desgraça, pois acabei cometendo o ato irremediável de matar um unicórnio para roubar seu chifre de cristal. No mesmo instante, fui amaldiçoado por um espírito que adentrou minha mente, devorando-a ininterruptamente."<br><br>O dragão moribundo abaixou a cabeça tristemente e continuou: "Agora é só uma questão de tempo até meu corpo se tornar uma casca vazia... abandonada e esquecida junto ao meu tesouro. Todavia, de certa forma isso faz eu me sentir em paz, pois nem a ganância e a avareza me incomodam mais. Não me importo com o que acontecerá com meu corpo ou meus tesouros quando eu morrer, pois ambos já não terão serventia para mim." O dragão move as patas dianteiras e revela o que guardava sobre elas: O chifre de cristal, seu tesouro majestoso e reluzente... seu tesouro mais precisoso e também sua sentença de morte. Arrastando o item com a pata para ti, o dragão diz: "Quero que fique com ele, prefiro entregá-lo a você que ouviu minha história, ao invés de ser pilhado por um saceador qualquer que encontrar minha carcaça... Não se preocupe, o item não é mais capaz de te amaldiçoar. Quem sabe ele lhe sirva como lição de que a ganância pode te aprisionar tal qual um calabouço."<br><br>O dragão olha para o tesouro a sua volta e diz: "Apenas lhe imploro que não roube meus pertences ainda, deixe-me morrer rodeado deles, satisfazendo minha última gota de luxúria." O dragão inspira e expira profundamente... seus olhos se fecham... a boca pende.</p>
+        </div>
+
+        <div id="C7" style="display: none;">
+            <img src="/img2.0/C7.png" alt="Imagem C7">
+            <p>Depois de mais uma longa caminhada sentindo o ar gelado batendo em seu rosto, você se pergunta o quão longe estaria de casa. Eis então que você vê algo que faz sua espinha congelar mais do que o próprio frio: Uma garotinha pálida que permanece imóvel ao lado de destroços do que parece ter sido um altar de pedras, contendo em sua superfície um pequeno cálice de cristal com uma bebida que emana um brilho azulado. A garotinha permanece de olhos arregalados, com lágrimas escorrendo pelo rosto, em uma expressão assustadoramente neutra. <br><br>Você corre em direção a garota, se abaixa até os olhos dela e pergunta o que ela está fazendo ali sozinha. A garota permanece em silêncio e com lágrimas descendo pelo rosto, você então segura os ombros da garota, notando sua pele está extremamente fria e seu olhar te atavessando completamente, como se ela nem notasse sua presença. Após chacoalhá-la levemente, você pergunta novamente o que ela está fazendo ali sozinha. Ela então, finalmente foca o olhar em você e diz: "Beba... Beba... Você tem que beber... beba..." e seu olhar novamente torna-se vazio. <br><br>Você então se aproxima do altar, pega o cálice translúcido e bebe o líquido reluzente. Contrariando sua expectativa, a bebida desce suave pela garganta e causa uma sensação revigorante. Quem diria que seria tão fácil assim não é mesmo? Você se vira para a pequena garotinha e percebe então que ela começa a levitar com os olhos iluminados quando, de repente, delicadas asas brotam de suas costas! A pequena garotinha era na verdade uma fada! <br><br>"Muito obrigada por retornar a minha antiga forma! Eu jamais poderia ter feito isso sozinha!" Após você perguntar o que aconteceu, a fadinha continua: "Um aprendiz de feiticeiro me encontrou e disse que precisava de ajuda, pois havia sido amaldiçoado. Nós fadas podemos qualquer desejo através de nossas lágrimas! Eu disse ao feiticeiro então que precisava de um cálice com água dentro que, ao entrar em contato com uma de minhas lágrimas, se tornaria uma bebida mágica que realizaria o desejo dele de se livrar da maldição!"<br><br>"Mas o feiticeiro estava mentindo para mim e, após pegar a bebida em mãos, ele colocou-a no altar e lançou um feitiço de paralizia em mim, dizendo que, de agora em diante, eu iria realizar os desejos dele para sempre e cortou minhas asas para que eu não fugisse mais! Para minha sorte, o feiticeiro era um tolo! Ele não sabia que lágrimas de fadas tiradas através da dor são extremamente perigosas e, ao tocar em meu rosto e beber as lágrimas que caiam, ele sentiu uma terrível dor e explodiu em um forte clarão!! Não o vi mais, desde então."<br><br>"O que importa é que você apareceu e, ao beber o cálice, atendeu ao meu pedido e me libertou!" A fadinha então tira de seu pescoço um pequeno colar com pequenos cristais, entrega para você e diz: "Você me salvou daquele terrivel condição e serei eternamente grata! Estou fraca demais para realizar qualquer desejo, mas aceite este colar como forma de minha gratidão! Ele contem cristais que só crescem na terra das fadas então é bastante raro. Fique com ele!"</p>
+        </div>
+
+        <!-- Parte 008 -->
+
+        <div id="A8" style="display: none;">
+            <img src="img2.0/A8.png" alt="Imagem A8">
+            <p>Você então se curva em sinal de respeito, agradecendo pelo presente e pelo momento ali vivido. Não sabe muito bem se era este tipo de aventura que estava esperando, mas o que quer que tenha sido o perigo iminente que deveria encontrar... já deve ter morrido, quem diria que seria uma aventura tão simples?<br><br>Você então ajeita os pertences em sua mochila e parte para o caminho de volta. Já está tarde, seu corpo está cansado e você começa a voltar para casa, carregando consigo uma bela recompensa!</p>
+        </div>
+
+        <div id="B8" style="display: none;">
+            <img src="img2.0/B8.png" alt="Imagem B8">
+            <p>Você agradece pelo presente e pelo momento ali vivido. Não sabe muito bem se era este tipo de aventura que estava esperando, mas não esperava algo tão simples. Você então ajeita os pertences em sua mochila e parte para o caminho de volta. Já está tarde, seu corpo está cansado e você começa a voltar para casa, carregando consigo uma bela recompensa!<br><br>De repente, você começa a ouvir o vento uivar de forma sombria, você sente o vento passando pelo seu rosto, te arrepiando por completo. Você, que já encarava a floresta para voltar a casa, se vira lentamente para trás. A cena é assustadora, a criatura que havia lhe entregado o tesouro há menos de 2 minutos, agora não passava de uma carcaça jazida no chão frio e, do interior dela, um ser esquelético e fantasmagórico emerge envolto em fumaças negras.<br><br>"Então você achou que levaria a relíquia assim facilmente? Criatura tola! Eu penetrei na carne deste ser desprezível para me manter vivo e sugar aos poucos sua energia vital! Agora que já estou liberto, não preciso mais deste corpo inútil. Vou finalmente pegar a relíquia que está em suas mãos imundas! Aliás, vou te matar e usar também a sua energia para ficar ainda mais forte!" <br><br> A criatura avança rapidamente em sua direção, mas você se esquiva e desfere um golpe na perna da besta. Guinchando de dor, a criatura abre os braços esguios e te acerta com uma das manzorras, te jogando metros para trás, fazendo você chocar as costas contra uma árvore. Você sente o ar se esvair dos pulmões, o seu olhar cruza com o olhar da besta enfurecida, que conjura uma orbe de fogo e atira-a em sua direção! Você rapidamente se esgueira para trás do tronco escapando da esfera flamejante, sentindo apenas o calor do impacto na árvore. Rapidamente você flanqueia a cruatura, se lança sobre ela e acerta-a no peito em cheio!<br><br>A besta projeta a manzorra em seu pescoço, envolvendo-o completamente. Você sente os dedos ossudos, com unhas afiadas penetrar em sua nuca e, com uma força demoniaca, a criatura te joga para longe! Você bate as costas sobre os destroços e cai de cara no chão, o gosto de sangue amarga a sua boca e o cheiro putrefato da criatura dificulta sua concentração. Você se vira com dificuldade e vê o demônio se lançando sobre você, projetando as manzorras esqueléticas sobre seu pescoço! Você sente a traqueia sendo contraída, a respiração é dificultada e seu coração dispara. A saliva fétida da criatura cai sobre você e a criatura diz: "Morra ser desprezível! Vou te matar com as próprias mãos para ver a vida se esvair de seus olhos!"<br><br>O sangue escorre pela lateral da sua boca, você não consegue se mover com uma criatura em cima de você. O calcanhar de suas botas arranham a terra no chão e você começa a pensar que talvez este possa ser o seu fim. Uma morte horrível, em um lugar que jamais estaria se não tivesse sido levado até lá pela curiosidade... A pessoa errada na hora errada... prestes a ser assassinada por uma criatura putrefata. A sua visão embaça, você sufoca, seu coração já não bate com tanto ritmo... e então, dando seu último suspiro, você fecha os olhos e sua vida se esvai.</p>
+        </div>
+
+        <div id="C8" style="display: none;">
+            <img src="img2.0/C8.png" alt="Imagem C8">
+            <p>Você agradece pelo presente e ajeita os pertences em sua mochila para começar o caminho de volta! Você se embreinha de volta à floresta, estreitando-se em meio às árvores que levam ao caminho de volta e pensando sobre tudo aquilo que havia testemunhado. Talvez não tenha sido exatamente o que você esperava encontrar... Mas, de qualquer forma, conseguiu uma bela recompensa!<br><br>De repente, você é interrompido por uma forte dor no estômago! O interior de suas etranhas queimam, sua garganta dói absurdamente ao engolir a sáliva excessiva que começa a se formar na sua boca. Você começa a sentir um cheiro ferroso acachapante, te causando náuseas absurdas! Todos estes sintomas indicam que você está tendo uma intoxicação, causada pela ingestão de veneno. Você imediatamente se lembra da bebida de ingeriu minutos atrás. Teria sido um erro beber o que aquele indivíduo te ofereceu?<br><br>Você cai de joelhos, com as mãos apoiadas no chão. Sua pele transpira excessivamente, as pupílas dilatam e sua visão fica turva! Você se deita no chão frio daquela floresta esquecida, tentando ver o pouco do céu que surge entre as copas das árvores... Seria este o seu fim? Seu corpo ali esquecido e abandonado, rejeitado por carniceiros devido à carne envenenada? Seus batimentos candíacos enfraquecem, seus níveis de consciência se alteram, sua visão embaça e você... sentindo uma profunda sonolência... fecha os olhos.</p>
+        </div>
+
+        <div id="D8" style="display: none;">
+            <img src="img2.0/D8.png" alt="Imagem D8">
+            <p>Você agradece pelo presente e pelo momento ali vivido. Não sabe muito bem se era este tipo de aventura que estava esperando, mas não esperava algo tão simples. Você então ajeita os pertences em sua mochila e parte para o caminho de volta. Já está tarde, seu corpo está cansado e você começa a voltar para casa, carregando o presente consigo!<br><br>De repente, o vento uiva de forma sombria, você sente o vento passando e arrepiando seu rosto. Você, que já encarava a floresta para voltar a casa, se vira lentamente para trás. A cena é assustadora, a criatura que havia lhe entregado o tesouro há poucos minutos, agora não passava de uma carcaça jazida no chão frio e, do interior dela, um ser esquelético e fantasmagórico emerge envolto em fumaças negras.<br><br>"Achou mesmo que levaria a relíquia assim facilmente? Criatura tola! Eu penetrei na carne deste ser desprezível para me manter vivo e sugar aos poucos sua energia vital! Agora que já estou liberto, não preciso mais deste corpo inútil. Finalmente terei a relíquia que está em suas mãos imundas! Aliás, vou te matar e usar sua energia para ficar ainda mais forte!" <br><br> A criatura avança rapidamente em sua direção, mas você se esquiva e desfere um golpe na perna da besta. Guinchando de dor, a criatura abre os braços esguios e te acerta com uma das manzorras, te jogando metros para longe, fazendo você chocar as costas contra uma árvore. Você sente o ar se esvair dos pulmões, o seu olhar cruza com o olhar da besta enfurecida, que conjura uma orbe de gelo e atira-a em sua direção! Você rapidamente se esgueira para trás do tronco escapando da esfera congelante, sentindo apenas o impacto gélido na árvore. Rapidamente você flanqueia a cruatura, se lança sobre ela e acerta-a no peito em cheio!<br><br>A besta projeta a manzorra em seu pescoço, envolvendo-o completamente. Você sente os dedos ossudos, com unhas afiadas penetrar em sua nuca e, com uma força demoniaca, a criatura te joga para longe! Você bate as costas sobre os destroços e cai de cara no chão, o gosto de sangue amarga a sua boca e o cheiro putrefato da criatura dificulta sua concentração. Você se vira com dificuldade e vê o demônio se lançando sobre você, projetando as manzorras sobre seu pescoço! Você sente a traqueia sendo contraída, a respiração é dificultada e seu coração dispara. A saliva fétida da criatura cai sobre você e a criatura diz: "Morra ser desprezível! Vou te matar com as próprias mãos para ver a vida se esvair de seus olhos!"<br><br>O sangue escorre pela lateral da sua boca, você não consegue se mover com uma criatura em cima de você. O calcanhar de suas botas arranham a terra no chão e você começa a pensar que talvez este possa ser o seu fim... Uma morte horrível por sinal. Você vira o rosto o máximo que o estrangulamento lhe permite e você vê a pobre criatura, há pouco tempo havia lhe dado a relíquia de presente, agora já morta com uma enorme fissura por onde o demônio emergiu. Quando seus olhos começam a se fechar, você nota um pedaço de cristal pontiagudo bem perto do cadáver... Ali está sua chance de escapatória! Você estica o braço o máximo que pode, pega o cristal e crava com toda sua força no olho do demônio!<br><br>A criatura se afasta de você, gritando de dor e agônia, levando uma das mãos ao olho que escorre do crânio. Você recupera suas forças, se levanta, parte pra cima da criatura e crava nela novamente o cristal. Dessa vez, no outro olho! O demônio grita, cai no chão se debatendo em desespero. Ali está o momento de por um fim nisso tudo! Você se prostra ao lado da criatura com o cristal ensanguentado em mãos e, juntando toda a sua raiva, você crava o cristal na têmpora da criatura... que morre instantaneamente com o cérebro perfurado. <br><br>Tudo volta a ficar em silêncio, você cai de joelhos a fim de recuperar as forças. Se pergunta se deve retirar o cristal cravado no crânio da besta... mas acha melhor deixá-lo lá. Talvez seja o próprio cristal que esteja mantendo a criatura morta... Na verdade, é melhor não arriscar. Você começa a ouvir o canto dos pássaros que acordam de seus ninhos no interior da floresta, já é possível sentir o cheiro do orvalho e, olhando para o céu, percebe que já está amanhecendo. Você se levanta, checa os pertences na mochila e se prepara para o caminho de volta. Dessa vez, com uma bela recompensa e uma história inacreditável pra contar.</p>
+        </div>
+
+        <!-- Parte 009 -->
+
+        <div id="A9" style="display: none;">
+            <img src="img2.0/A9.png" alt="Imagem A9">
+            <p>Sua aventura chega ao fim, talvez com um desfexo triste... talvez feliz... não sei, e essa é a beleza das aventuras. Mas não pense que ela para por aqui, há outras histórias para se viver! Quem sabe o que você será, o que encontrará e como acabará na próxima vez que o crônometro funcionar. Nos vemos numa próxima!</p>
+        </div>
+
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
