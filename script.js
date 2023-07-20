@@ -2,6 +2,11 @@ var timerInterval;
 var startTime;
 var elapsedTime = 0;
 
+const header = document.querySelector("#header");
+const backTop = document.querySelector("#back-top");
+const titleBig = document.querySelector(".title");
+const titleSmall = document.querySelector(".title-header");
+
 function startTimer() {
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(updateTimer, 10);
@@ -43,6 +48,7 @@ function stopTimer() {
   }
 
   questionAnswer();
+  header.style.height = "10vh";
   scrollDown();
 
   
@@ -77,6 +83,7 @@ function resetTimer() {
 
   document.querySelector(".reset-button").style.display = "none";
   document.querySelector(".start-button").style.display = "block";
+  header.style.height = "0vh";
 }
   
 function updateTimer() {
@@ -108,3 +115,29 @@ function showRandomDiv(ids) {
     // Acesse o elemento div correspondente e altere sua propriedade display
     document.getElementById(randomId).style.display = 'block';
 }
+
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 100) {
+    header.style.height = "10vh";
+    backTop.style.marginRight = "10px";
+    
+  } else {
+    header.style.height = "0vh";
+    backTop.style.marginRight = "-100px";
+    
+  }
+
+
+  if(window.scrollY > 100) {
+    titleBig.style.opacity = "0";
+    titleSmall.style.opacity = "1";
+  } else {
+    titleBig.style.opacity = "1";
+    titleSmall.style.opacity = "0";
+  }
+})
+
+backTop.addEventListener('click', () => {
+  window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+})
