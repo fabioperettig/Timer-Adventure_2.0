@@ -6,6 +6,7 @@
 }
 
 body {
+    margin: 0 auto;
     width: 100vw;
     height: 100vh;
     background: #291c38;
@@ -36,6 +37,7 @@ body {
     grid-column: 3/4;
     justify-self: end;
     margin-right: -100px;
+    margin-top: -20px;
 
     transition: margin-right 0.5s ease;
     
@@ -54,7 +56,6 @@ body {
 }
 
 #stories {
-    min-height: 100vh;
     padding: 0 10%;
     justify-content: center;
     
@@ -128,7 +129,7 @@ button {
 }
 
 p {
-    margin: 20px 0 0 0;
+    margin: 40px 0;
     font-size: 16pt;
     color: #e5ded4;
     text-align: center;
