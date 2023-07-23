@@ -21,7 +21,7 @@ function stopTimer() {
   document.querySelector(".stop-button").style.display = "none";
   document.querySelector(".reset-button").style.display = "block";
   
-  if (elapsedTime > 3501) {
+  if (elapsedTime > 300001) {
     showRandomDiv(["A1", "B1", "C1", "D1", "E1"]);
     showRandomDiv(["A2", "B2", "C2"]);
     showRandomDiv(["A3", "B3", "C3", "D3"]);
@@ -29,21 +29,21 @@ function stopTimer() {
     showRandomDiv(["A7", "B7", "C7"]);
     showRandomDiv(["A8", "B8", "C8", "D8"]);
     showRandomDiv(["A9"]);
-  } else if (elapsedTime > 3001 && elapsedTime < 3500) {
+  } else if (elapsedTime > 210001 && elapsedTime < 300000) {
     showRandomDiv(["A1", "B1", "C1", "D1", "E1"]);
     showRandomDiv(["A2", "B2", "C2"]);
     showRandomDiv(["A3", "B3", "C3", "D3"]);
     showRandomDiv(["A4", "B4"]);
     showRandomDiv(["A5"]);
-  } else if (elapsedTime > 2001 && elapsedTime < 3000) {
+  } else if (elapsedTime > 120001 && elapsedTime < 210000) {
     showRandomDiv(["A1", "B1", "C1", "D1", "E1"]);
     showRandomDiv(["A2", "B2", "C2"]);
     showRandomDiv(["A3", "B3", "C3", "D3"]);
     showRandomDiv(["A35", "B35", "C35"]);
-  } else if (elapsedTime > 1001 && elapsedTime < 2000) {
+  } else if (elapsedTime > 60001 && elapsedTime < 120000) {
     showRandomDiv(["A1", "B1", "C1", "D1", "E1"]);
     showRandomDiv(["A15", "B15", "C15", "D15"]);
-  } else if (elapsedTime < 1000) {
+  } else if (elapsedTime < 60000) {
     showRandomDiv(["A0"]);
   }
 
